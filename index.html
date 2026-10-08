@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amplificati · Assistenza</title>
+  <meta name="description" content="Assistenza di Amplificati, l'app per la manifestazione e la legge d'attrazione: contatti e domande frequenti su abbonamento, prova gratuita, guida AI e dati.">
+  <link rel="icon" href="icona.png">
+  <link rel="apple-touch-icon" href="icona.png">
+  <style>
+    :root {
+      --sfondo: #000;
+      --sfondo-alto: #0e1633;
+      --scheda: #15171e;
+      --bordo: #2c303b;
+      --testo: #fff;
+      --secondario: rgba(235, 235, 245, 0.72);
+      --accento: #e6cc94;
+      --su-accento: #0b0b0f;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, var(--sfondo-alto) 0, var(--sfondo) 520px) no-repeat, var(--sfondo);
+      color: var(--testo);
+      font: 18px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main { max-width: 680px; margin: 0 auto; padding: 56px 20px 40px; }
+    header { text-align: center; margin-bottom: 40px; }
+    header img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 10px 40px rgba(172, 125, 27, 0.35); }
+    .marchio { margin: 18px 0 4px; font-size: 14px; letter-spacing: 0.22em; color: var(--accento); font-weight: 600; }
+    h1 { margin: 0 0 10px; font-size: 34px; line-height: 1.2; }
+    header p { margin: 0 auto; max-width: 30em; color: var(--secondario); }
+    h2 { font-size: 24px; margin: 44px 0 14px; }
+    .contatto { background: var(--scheda); border-radius: 24px; padding: 22px; }
+    .contatto p { margin: 0 0 16px; color: var(--secondario); }
+    .bottone {
+      display: inline-block; background: var(--accento); color: var(--su-accento);
+      text-decoration: none; font-weight: 600; padding: 15px 26px; border-radius: 999px;
+      min-height: 52px; word-break: break-all;
+    }
+    .bottone:focus-visible, summary:focus-visible, a:focus-visible { outline: 3px solid var(--accento); outline-offset: 3px; }
+    details { background: var(--scheda); border-radius: 20px; margin-bottom: 10px; }
+    summary {
+      cursor: pointer; list-style: none; padding: 18px 52px 18px 20px; font-weight: 600; position: relative;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+      color: var(--accento); font-size: 26px; font-weight: 400;
+    }
+    details[open] summary::after { content: "–"; }
+    details > div { padding: 0 20px 18px; color: var(--secondario); }
+    details > div p { margin: 0 0 10px; }
+    details > div p:last-child { margin-bottom: 0; }
+    strong { color: var(--testo); font-weight: 600; }
+    a { color: var(--accento); }
+    .nota { margin-top: 36px; font-size: 16px; color: var(--secondario); text-align: center; }
+    footer {
+      margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--bordo);
+      font-size: 16px; color: var(--secondario); text-align: center;
+    }
+    footer a { margin: 0 8px; }
+    @media (max-width: 420px) {
+      main { padding-top: 40px; }
+      h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="icona.png" alt="" width="96" height="96">
+      <p class="marchio">AMPLIFICATI</p>
+      <h1>Come possiamo aiutarti?</h1>
+      <p>Qui trovi le risposte alle domande più comuni. Se non trovi la tua, scrivici: ti rispondiamo noi, non un robot.</p>
+    </header>
+
+    <section class="contatto" aria-labelledby="scrivici">
+      <h2 id="scrivici" style="margin-top:0">Scrivici</h2>
+      <p>Raccontaci cosa succede e, se puoi, aggiungi il tuo codice: lo trovi nell'app in <strong>Profilo › Il tuo codice</strong>. Rispondiamo di solito entro 2 giorni lavorativi.</p>
+      <a class="bottone" href="mailto:assistenza@amplificati.it?subject=Assistenza%20Amplificati">assistenza@amplificati.it</a>
+    </section>
+
+    <h2>Domande frequenti</h2>
+
+    <details>
+      <summary>Come disdico l'abbonamento?</summary>
+      <div>
+        <p>Su iPhone: <strong>Impostazioni › il tuo nome › Abbonamenti › Amplificati › Annulla abbonamento</strong>. Oppure, nell'app, apri il <strong>Profilo</strong> e tocca <strong>Gestisci abbonamento</strong>.</p>
+        <p>Disinstallare l'app non disdice l'abbonamento. Dopo la disdetta continui a usare Premium fino alla fine del periodo già pagato.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Come funziona la prova gratuita?</summary>
+      <div>
+        <p>Con il piano annuale hai <strong>7 giorni gratis</strong> e oggi non paghi nulla. Se hai le notifiche attive, ti avvisiamo 2 giorni prima della fine.</p>
+        <p>Se non disdici, alla fine della prova parte l'abbonamento annuale. Per non pagare nulla, disdici <strong>almeno 24 ore prima</strong> della fine della prova.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Quanto costa Amplificati Premium?</summary>
+      <div>
+        <p><strong>19,99 € all'anno</strong> (con 7 giorni di prova gratuita) oppure <strong>3,99 € al mese</strong>. L'abbonamento si rinnova automaticamente finché non lo disdici.</p>
+        <p>Il messaggio del giorno, la carta, il diario, il primo giorno di ogni percorso e una frequenza al giorno restano sempre gratis.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Ho cambiato telefono: come recupero l'abbonamento?</summary>
+      <div>
+        <p>Accedi con lo <strong>stesso ID Apple</strong>, apri Amplificati e tocca <strong>Ripristina acquisti</strong>: lo trovi nel Profilo e nella pagina dell'abbonamento.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Posso avere un rimborso?</summary>
+      <div>
+        <p>I pagamenti li gestisce Apple: puoi chiedere un rimborso su <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>, con il tuo ID Apple.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Cos'è la guida AI?</summary>
+      <div>
+        <p>È un'intelligenza artificiale a cui racconti come ti senti: ti ascolta e ti aiuta a fare chiarezza. È inclusa in Premium, fino a 25 messaggi al giorno.</p>
+        <p>Prima di usarla ti chiediamo il consenso. Puoi ritirarlo quando vuoi dal <strong>Profilo</strong>, e cancellare la conversazione dalla guida.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Non ricevo il messaggio del mattino</summary>
+      <div>
+        <p>Controlla che le notifiche siano attive in <strong>Impostazioni › Notifiche › Amplificati</strong>. Nel <strong>Profilo</strong> dell'app puoi scegliere l'orario del messaggio.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Come elimino i miei dati?</summary>
+      <div>
+        <p>Nell'app apri il <strong>Profilo</strong> e tocca <strong>Elimina i miei dati</strong>: cancelliamo il tuo account e tutto quello che hai salvato sui nostri server.</p>
+        <p>L'abbonamento è gestito da Apple: se è attivo, disdicilo a parte dalle Impostazioni.</p>
+      </div>
+    </details>
+
+    <p class="nota">Amplificati è una pratica di benessere e crescita personale: non sostituisce un parere medico o psicologico.</p>
+
+    <footer>
+      <a href="privacy/">Privacy</a>
+      <a href="termini/">Termini d'uso</a>
+      <a href="https://www.instagram.com/amplificatii/" rel="noopener">Instagram</a>
+      <p>© 2026 Amplificati</p>
+    </footer>
+  </main>
+</body>
+</html>
