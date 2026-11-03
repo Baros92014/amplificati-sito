@@ -18,10 +18,20 @@
       background: var(--accento); color: #1a1406; font-weight: 600; font-size: 19px; text-align: center; text-decoration: none;
     }
     .nota { color: var(--secondario); font-size: 16px; }
+    /* Dentro Instagram (o Facebook, TikTok) non c'è l'account Google: il gruppo risponde "Non hai l'autorizzazione". */
+    #dentro-app { display: none; margin: 0 0 28px; padding: 20px; border: 2px solid var(--accento); border-radius: 18px; }
+    #dentro-app h2 { margin: 0 0 8px; }
   </style>
 </head>
 <body>
   <main>
+    <section id="dentro-app">
+      <h2>Prima apri questa pagina in Chrome</h2>
+      <p>Sei dentro Instagram: qui Google non sa chi sei e il gruppo ti direbbe <strong>"Non hai l'autorizzazione"</strong>. In Chrome invece hai già il tuo account Google.</p>
+      <a class="bottone" id="apri-chrome" href="#">Apri in Chrome</a>
+      <p class="nota">Se non si apre: tocca i <strong>tre puntini</strong> in alto a destra e scegli <strong>"Apri in Chrome"</strong> (o "Apri nel browser").</p>
+    </section>
+
     <h1>Prova Amplificati su Android</h1>
     <p>L'app di <strong>@amplificatii</strong> sta per arrivare sul Play Store. Prima Google chiede che un piccolo gruppo di persone la provi per <strong>14 giorni</strong>: se hai un telefono Android (Samsung, Xiaomi, Motorola…) puoi essere tra le prime persone a provarla.</p>
     <p>Bastano <strong>3 passaggi</strong>, da fare <strong>dal telefono</strong> e con lo stesso account Google che usi nel Play Store.</p>
@@ -31,6 +41,7 @@
       <p>Tocca il pulsante e poi <strong>"Partecipa al gruppo"</strong>. Se te lo chiede, conferma il tuo nome.</p>
       <a class="bottone" href="https://groups.google.com/g/tester-amplificati">Entra nel gruppo</a>
       <p class="nota">Il gruppo serve solo a Google per sapere chi può scaricare l'app: non è una chat e nessuno vede il tuo indirizzo.</p>
+      <p class="nota">Se vedi <strong>"Non hai l'autorizzazione"</strong>, non hai fatto l'accesso a Google: apri questa pagina in Chrome, oppure tocca "Accedi" in alto a destra.</p>
     </section>
 
     <section class="passo">
@@ -60,5 +71,21 @@
       <a href="../termini/">Termini d'uso</a>
     </footer>
   </main>
+  <script>
+    // Dal link nelle storie la pagina si apre nel browser interno di Instagram, senza account Google.
+    // Su Android un link intent:// la riapre in Chrome; ci prova una volta da solo, poi resta il pulsante.
+    (function () {
+      var ua = navigator.userAgent;
+      if (!/Android/i.test(ua) || !/Instagram|FBAN|FBAV|FB_IAB|musical_ly|Bytedance|TikTok/i.test(ua)) return;
+      var chrome = 'intent://' + location.host + location.pathname + '#Intent;scheme=https;package=com.android.chrome;end';
+      document.getElementById('dentro-app').style.display = 'block';
+      document.getElementById('apri-chrome').href = chrome;
+      try {
+        if (sessionStorage.getItem('provato-chrome')) return;
+        sessionStorage.setItem('provato-chrome', '1');
+      } catch (e) { return; }
+      location.href = chrome;
+    })();
+  </script>
 </body>
 </html>
